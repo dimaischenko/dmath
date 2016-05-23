@@ -1,0 +1,358 @@
+<html>
+<head>
+<meta charset = "utf-8"></meta>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style>
+.tfinal {
+	text-align: justify;
+	color: #BBBBBB;
+	padding: 60 0 10 0;
+}
+
+.tname {
+	padding: 0 0 .5em 0;
+}
+.pname {
+	color: #FF0000;
+	font-weight: bold;
+}
+.pdate {
+	color: #EEEEEE;
+	font-size: .8em;
+}
+.shad {
+	color: orange;
+	font-weight: bold;
+}
+.contents {
+  color: black;
+  padding: .7em;
+}
+.contents a {
+  color: black;
+  font-weight: bold;
+}
+.contents .hid {
+  color: #CCCCCC;
+  pointer-events: none;
+  cursor: default;
+  font-weight: normal;
+}
+.imgtd {
+  vertical-align: top;
+  align: right;
+}
+
+</style>
+
+<title>Ischenko | Math</title>
+
+</head>
+<body>
+
+<table width = "600" align = "center">
+<tr><td>
+<center><h2>Конспекты Д.И.</h2></center>
+<table class = "ctable" width = "100%">
+<tr>
+<td>
+<table class = "contents">
+<tr><td class = "hid">(xiiv)</td><td><a class = "hid" href = "">Правильные многоугольники</a></td></tr>
+<tr><td class = "hid">(xiiv)</td><td><a class = "hid" href = "">Основные распределения</a></td></tr>
+<tr><td class = "hid">(xiii)</td><td><a class = "hid" href = "">Изменение порядка суммирования</a></td></tr>
+<tr><td class = "hid">(xii)</td><td><a class = "hid" href = "">Перестановки и свойства</a></td></tr>
+<tr><td>(xi)</td><td><a href = "#nmb">О числах</a></td></tr>
+<tr><td>(x)</td><td><a href = "#nerk">Неравенство о средних</a></td></tr>
+<tr><td>(ix)</td><td><a href = "#podob">Подобные матрицы. Жорданова форма</a></td></tr>
+<tr><td>(viii)</td><td><a href = "#mprop">Дополнительные свойства матриц</a></td></tr>
+<tr><td>(vii)</td><td><a href = "#deter">Свойства определителя $|\mathbf{A}|$</a></td></tr>
+<tr><td>(vi)</td><td><a href = "#corr">Поправки на множественное сравнение</a></td></tr>
+<tr><td>(v)</td><td><a href = "#expv">Математическое ожидание. Дисперсия</a></td></tr>
+<tr><td>(iv)</td><td><a href = "#cnk">Несколько свойств $C_n^k$</a></td></tr>
+<tr><td>(iii)</td><td><a href = "#intpt">Интегрирование по частям</a></td></tr>
+<tr><td>(ii)</td><td><a href = "#prog">Прогрессии</a></td></tr>
+<tr><td>(i)</td><td><a href = "#harm">Гармонические ряды</a></td></tr>
+
+</table>
+</td>
+<td valgin = "top" class = "imgtd">
+<!-- <img src = "" width = "120"/> -->
+</td>
+
+</tr>
+</table>
+
+</td></tr>
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "nerk"></a> 
+<div class = "pname">О числах</div>
+<div class = "pdate">02.04.2016</div>
+<p>Разложение натурального $n$ &mdash; упорядоченкая сумма натуральных слагаемых. В общем случае
+существуюет $2^{(n-1)}$ разложений (композиций) числа $n$, из которых в точности $C_{n-1}^{k-1}$ имеют длину $k$.
+Разрешая нулевые слагаемые: $C_{n+k-1}^{k-1}$ разложений, произвольной длины &mdash; бесконечно много.</p>
+
+<p>Малая теорема <b>Ферма</b>: если $p$ &mdash; простое числа и $a$ &mdash; целое число, не делящееся на $p$, то
+$a^{p-1} - 1$ делится на $p$, то есть $a^{p-1} = 1 \; (mod \; p)$.</p>
+</td></tr>
+<tr><td>
+</td></tr>
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "nerk"></a> 
+<div class = "pname">Неравенство о средних</div>
+<div class = "pdate">07.02.2016</div>
+<p>Для любых неотрицательных $x_1, x_2, ..., x_n$ верно неравенство:</p>
+\[ \bar{x}_{kvadr} \geq \bar{x}_{arithm} \geq \bar{x}_{geom} \geq \bar{x}_{garmon}\]
+
+\[ \bar{x}_{kvadr} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}{x_i^2}} \]
+\[ \bar{x}_{arithm} = \frac{1}{n}\sum_{i=1}^{n}{x_i} \]
+\[ \bar{x}_{geom} = \sqrt[n]{\prod_{i=1}^{n}{x_i}} \]
+\[ \bar{x}_{garmon} = \frac{n}{\sum_{i=1}^{n}{\frac{1}{x_i}}} \]
+</td></tr>
+<tr><td>
+</td></tr>
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "podob"></a> 
+<div class = "pname">Подобные матрицы. Жорданова форма</div>
+<div class = "pdate">03.02.2016</div>
+<p>
+Матрица $\mathbf{A}$ подобна $\mathbf{B}$, если существует невырожденная $\mathbf{C}$ такая, что:
+\[\mathbf{A} = \mathbf{C}^{-1}\mathbf{B}\mathbf{C}\]
+</p>
+<p>
+У подобных матриц совпадает: определитель, ранг, след, собственные значения (<i>собственные векторы не обязательно совпадают</i>).
+В вышеприведенном равенстве, $\mathbf{C}$ выступает в качестве матрицы перехода от одного базиса к другому.
+</p>
+<p>Жорданова клетка:
+\[ \mathbf{J}_{\lambda} = \left( \begin{array}{ccc}
+\lambda & 1 & 0 \\
+0 & \lambda & 1 \\
+0 & 0 & \lambda \end{array} \right)\] 
+</p>
+Для любой матрицы $\mathbf{A}$ существует невырожденная $\mathbf{C}$ такая, что:
+\[\mathbf{A} = \mathbf{C}^{-1}\mathbf{J}\mathbf{C}\]
+</p>
+<p>$\mathbf{J}$ &mdash; матрица, на диагонали которой находятся различные жордановы блоки $\mathbf{J}_{\lambda_i}$.
+$\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Если все жордановы клетки имеют размерность $1$, то матрица диагональная.
+Для эрмитовой матрицы ($\mathbf{A} = \mathbf{A}^{*}$, где $\mathbf{A}^{*}$ &mdash; комплексно-сопряженная и транспонированная,
+частный случай &mdash; действительная симметричная матрица) все жордановы клетки имеют размерность $1$.</p>
+<p>Жордановы формы двух подобных матриц совпадают с точностью до порядка клеток. Матрица $\mathbf{A}$ подобна $\mathbf{A}^T$.</p>
+</td></tr>
+<tr><td>
+</td></tr>
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "mprop"></a> 
+<div class = "pname">Дополнительные свойства матриц</div>
+<div class = "pdate">24.01.2016</div>
+<p>Несколько дополнительных свойств матриц:</p>
+<ul>
+  <li>Если $\mathbf{AB} = \mathbf{BA}$, то матрицы $\mathbf{A}$ и $\mathbf{B}$ называются коммутирующими между собой.</li>
+  <li>$\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{AB} + \mathbf{BC}$.</li>
+  <li>$tr(\mathbf{AB}) = tr(\mathbf{BA})$.</li>
+  <li>$(\mathbf{AB})^T = \mathbf{B}^T\mathbf{A}^T$.</li>
+  <li>$(\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}$. Доказательство: 
+\[\mathbf{AB} = \mathbf{C}\] 
+\[\mathbf{B}^{-1}\mathbf{A}^{-1}\mathbf{AB}\mathbf{C}^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\mathbf{C}\mathbf{C}^{-1}\]
+\[\mathbf{B}^{-1}\mathbf{E}\mathbf{B}\mathbf{C}^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\mathbf{E}\]
+\[\mathbf{B}^{-1}\mathbf{B}\mathbf{C}^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1} \; \Rightarrow \; \mathbf{C}^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\]
+</li>
+<li>$(\mathbf{A}^{-1})^T = (\mathbf{A}^T)^{-1}$</li>
+<li>$(\mathbf{A} + \mathbf{B})^T = \mathbf{A}^T + \mathbf{B}^T$.</li>
+<li>$tr(\mathbf{A}) = tr(\mathbf{A}^T)$</li>
+<li><font color = "gray">$\ln{det(\mathbf{A})} = tr(\ln{\mathbf{A}})$ (разобраться с матричной экспонентой!)</font></li>
+<li>$tr(\mathbf{A}) = \sum_{i}^{n}{\lambda_i}$</li>
+<li>$tr(\mathbf{A}^m) = \sum_{i}^{n}{\lambda_i^m}$</li>
+</ul> 
+</td></tr>
+<tr><td>
+</td></tr>
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "deter"></a> 
+<div class = "pname">Свойства определителя $|\mathbf{A}|$</div>
+<div class = "pdate">28.11.2015</div>
+<p>Разные виды записи и подсчет через миноры при разложении по $i$-ой строке:</p>
+\[det(\mathbf{A}) \equiv \Delta_A \equiv |\mathbf{A}| = \sum_{j=1}^{n}{(-1)^{i+j}a_{ij}\bar{M}_i^j}\]
+ <p>Свойства:</p>
+ <ul>
+  <li>При добавлении к любой строке (столбцу) линейной комбинации других строк (столбцов) определтель
+  не меняется.</li>
+  <li>Если две и более строки (столбца) линейно зависимы (в частности равны), то $|\mathbf{A}| = 0$.</li>
+  <li>Если две строки (столбца) поменять местами, определитель сменит знак $|\mathbf{A}'| = -|\mathbf{A}|$.</li>
+  <li>Общий множитель строки (столбца) можно вынести за знак детерминанта. В частности $|k\mathbf{A}| = k^n|\mathbf{A}|$.</li>
+  <li>Если в $|\mathbf{A}|$ есть нулевая строка (столбец), то $|\mathbf{A}| = 0$.</li>
+  <li>$|\mathbf{AB}| = |\mathbf{A}||\mathbf{B}|$.</li>
+  <li>$|\mathbf{A}| = \prod_{i = 1}^n{\lambda_i}$, где $\lambda_i$ &mdash; $i$-ое собственное значение матрицы $\mathbf{A}$.</li>
+  <li><i>Свойство линейности</i>: Если элементы какой-либо строки представлены в виде суммы двух слагаемых, то 
+  определитель равен сумме двух определителей, в первом из которых элементы отмеченной строки равны первым
+  слагаемым, во втором &mdash; вторым.</li>
+  <li>$|\mathbf{A}| = \prod_{i = 1}^{n}{a_{ii}}$, если $\mathbf{A}$ <i>треугольная</i> матрица (верхне- или нижнетреугольная).</li>
+  <li>$|\mathbf{A}^T| = |\mathbf{A}|$.</li>
+  <li>Чтобы матрица $\mathbf{A}$ имела обратную $\mathbf{A}^{-1}$, необходимо чтобы $|\mathbf{A}| \neq 0$.</li>
+</ul> 
+</td></tr>
+<tr><td>
+</td></tr>
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "corr"></a> 
+<div class = "pname">Поправки на множественное сравнение</div>
+<div class = "pdate">06.11.2015</div>
+<p>Проведена серия из $n$ статистических тестов. Отсортируем их $p$ по возрастанию: $p_1 \leq p_2 \leq ... \leq p_n$. Рассмотрим несколько поправок на множественное сравнение (от жестких к мягким):</p>
+<p>Поправка <b>Бонферрони</b>:</p>
+\[\widetilde{p}_i = {p_i} \cdot {n}\]
+<p>Поправка методом <b>Холма</b>:</p>
+\[\widetilde{p}_i = {p_i} \cdot {(n - i + 1)}\]
+<p>Поправка <b>Бенджамини-Хохберга</b>:</p>
+\[\widetilde{p}_i = p_i \cdot \frac{n}{i}\]
+<p><i>В поправке Б-Х есть дополнительное условие $\widetilde{p}_i = min(p_i \cdot \frac{n}{i}, \widetilde{p}_{i-1})$</i></p>
+<p>Во всех корректировках $\widetilde{p}_i = min(1, ...)$</p>
+</td></tr>
+<tr><td>
+</td></tr>
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "expv"></a> 
+<div class = "pname">Математическое ожидание. Дисперсия</div>
+<div class = "pdate">25.10.2015</div>
+<p>Математическое ожидание непрерывной случайной величины:</p>
+\[M[X] = \int_{-\infty}^{\infty}{x f_x(x) dx}\]
+<p>Дисперсия ($D[X]$ или $Var(X)$):</p>
+\[D[X] = M[(X - M[X])^2] = \sigma^2\]
+<p>$\sigma$ &mdash; стандартное или среднеквадратичное отклонение. Удобная запись:</p>
+\[D[X] = M[X^2] - (M[X])^2 \]
+<p>Неравенство <b>Чебышева</b>:</p>
+\[P(|X - \mu| \geq a) \leq \frac{\sigma^2}{a^2}\]
+<p>Для неотрицательной целочисленной случайной величины:</p>
+\[M[X] = \sum_{i = 1}^{\infty}{P(X \geq i)} \]
+<p>Для неотрицательной непрерывной случайной величины:</p>
+\[M[X] = \int_{0}^{\infty}{P(X \geq x) dx} \]
+
+</td></tr>
+<tr><td>
+</td></tr>
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "cnk"></a>
+<div class = "pname">Несколько свойств $C_n^k$</div>
+<div class = "pdate">25.10.2015</div>
+</p>
+</td></tr>
+<tr><td>
+<p>Два вида записи:</p>
+\[C_n^k \equiv \binom{n}{k} = \frac{n!}{k! (n-k)!}\]
+<p>Бином Ньютона (для всех $k > n$ : $C_n^k = 0$):</p>
+\[(1+x)^n = \sum_{k = 0}^{\infty}{C_n^k x^k}\]
+
+<p>Сумма соседей:</p>
+\[C_n^k + C_n^{k+1} = C_{n+1}^{k}\]
+<p>Разность:</p>
+\[C_{n}^{k} - C_{n-1}^{k-1} = C_{n-1}^{k}\]
+<p>Из задачи (<span class = "shad">ШАД</span>):</p>
+\[\sum_{t = 0}^m{C_{s+t}^{t}} = C_{s + m + 1}^{m}\]
+<p>Сумма:</p>
+\[\sum_{m = 0}^n{C_{m}^{k}} = C_{n+1}^{k+1}\]
+
+</td></tr>
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "intpt"></a>
+<div class = "pname">Интегрирование по частям</div>
+<div class = "pdate">25.10.2015</div>
+</p>
+</td></tr>
+<tr><td>
+<p>Формула интегрирования по частям:</p>
+\[\int{u dv} = uv - \int{v du}\]
+<p>Удобная запись:</p>
+\[\int{uv' dx} = uv - \int{u'v dx}\]
+<p>Стоит помнить, что в неопределённом виде равенство выполняется с точностью до <i>константы</i>. Ошибочный парадокс:</p>
+\[\int{\frac{dx}{x}} = \frac{1}{x}\cdot{x} - \int{\frac{-1}{x^2} \cdot xdx} = 1 + \int{\frac{dx}{x}} \; \Rightarrow \; 0 = 1\]
+<p>Один из примеров (<span class = "shad">ШАД</span>):</p>
+\[\Phi = \int_a^b{\varphi(x)\varphi'(x)dx} = \varphi^2(x) \bigg|_a^b - \int_a^b{\varphi(x)\varphi'(x) dx} = \varphi^2(x) \bigg|_a^b - \Phi\]
+\[\Phi = \frac{1}{2} \cdot \varphi^2(x) \bigg|_a^b\]
+</td></tr>
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "prog"></a>
+<div class = "pname">Прогрессии</div>
+<div class = "pdate">24.10.2015</div>
+</p>
+</td></tr>
+<tr><td>
+<p>Арифметическая прогрессия:</p>
+\[a_n = a_1 + (n-1)d\]
+\[S = \frac{a_1 + a_n}{2} \cdot n\]
+<p>Геометрическая прогрессия:</p>
+\[b_n = b_1 q^{n-1}\]
+\[|b_n| = \sqrt{b_{n-1}b_{n+1}}\]
+\[S = \frac{b_1(1-q^n)}{1-q}\]
+<p>Бесконечно убывающая геометрическая прогрессия ($|q| < 1$):</p>
+\[S_n \to \frac{b_1}{1 - q}, n \to \infty\]
+</td></tr>
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "harm"></a>
+<div class = "pname">Гармонические ряды</div>
+<div class = "pdate">24.10.2015</div>
+</p>
+</td></tr>
+<tr><td>
+<p>Гармонический ряд:</p>
+\[S = 1 + \frac{1}{2} + \frac{1}{3} + ... = \sum_{k = 1}^{\infty}{\frac{1}{k}}\]
+<p>Ряд <i>расходится</i>. Аналогичный знакопеременный ряд сходится:</p>
+\[S = 1 - \frac{1}{2} + \frac{1}{3} - ... = \sum_{k = 1}^{\infty}{(-1)^{k+1} \frac{1}{k}} = \ln 2\]
+<p>Обобщённый гармонический ряд &mdash; ряд <b>Дирихле</b>:</p>
+\[S = 1 + \frac{1}{2^{\alpha}} + \frac{1}{3^{\alpha}} + ... = \sum_{k = 1}^{\infty}{\frac{1}{k^{\alpha}}}\]
+<p>Ряд Дирихле расходится при $\alpha \leq 1$ и сходится при $\alpha > 1$.</p>
+\[\sum_{k = 1}^{\infty}{\frac{1}{k^{\alpha}}} = \zeta(\alpha)\]
+<p>$\zeta(\alpha)$ &mdash; дзета-функция <b>Римана</b>. Для чётных $\alpha$ выражается через число $\pi$. Например, $\zeta(2) = \frac{\pi^2}{6}$, а уже для $\alpha = 3$ значение $\zeta(3)$ аналитически <i>неизвестно</i>.</p>
+</td></tr>
+<tr><td class = "tfinal">
+Конспект создается и наполняется во время подготовки к вступительному экзамену в ШАД осенними вечерами пятнадцатого года. Дима Ищенко. 2015&#8210;2016. С верой в победу и успех.
+</td></tr>
+</table>
+
+</body>
+</html>
