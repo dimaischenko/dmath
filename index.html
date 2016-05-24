@@ -66,10 +66,12 @@ MathJax.Hub.Config({
 <tr>
 <td>
 <table class = "contents">
-<tr><td class = "hid">(xiiv)</td><td><a class = "hid" href = "">Правильные многоугольники</a></td></tr>
-<tr><td class = "hid">(xiiv)</td><td><a class = "hid" href = "">Основные распределения</a></td></tr>
+<tr><td class = "hid">(xvi)</td><td><a class = "hid" href = "">Числа Стирлинга, Фибоначчи, Каталана</a></td></tr>
+<tr><td class = "hid">(xv)</td><td><a class = "hid" href = "">Правильные многоугольники</a></td></tr>
+<tr><td class = "hid">(xiv)</td><td><a class = "hid" href = "">Основные распределения</a></td></tr>
 <tr><td class = "hid">(xiii)</td><td><a class = "hid" href = "">Изменение порядка суммирования</a></td></tr>
-<tr><td class = "hid">(xii)</td><td><a class = "hid" href = "">Перестановки и свойства</a></td></tr>
+<tr><td >(xiii)</td><td><a href = "#sconv">Признаки сходимости рядов</a></td></tr>
+<tr><td >(xii)</td><td><a href = "#perm">Перестановки и свойства</a></td></tr>
 <tr><td>(xi)</td><td><a href = "#nmb">О числах</a></td></tr>
 <tr><td>(x)</td><td><a href = "#nerk">Неравенство о средних</a></td></tr>
 <tr><td>(ix)</td><td><a href = "#podob">Подобные матрицы. Жорданова форма</a></td></tr>
@@ -94,11 +96,59 @@ MathJax.Hub.Config({
 </td></tr>
 
 
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "sconv"></a> 
+<div class = "pname">(xiii) Признаки сходимости рядов</div>
+<div class = "pdate">19.04.2016</div>
+<p>Признак <b>Д'Аламбера</b>:</p>
+\[ \lim_{n \to \infty }{\frac{a_{n+1}}{a_n}} = L\]
+<p>Признак <b>Коши</b>:</p>
+\[ \lim_{n \to \infty }{\sqrt[n]{a_n}} = L\]
+<p>при $L < 1$ сходится, $L > 1$ расходится, $L = 1$ &mdash; неизвестно.
+<p>Признак <b>Раабе</b> (ряд строго положителен):</p>
+\[ \lim_{n \to \infty }{n(\frac{a_n}{a_{n+1}} - 1)} = p\]
+<p>при $p > 1$ сходится, $p < 1$ расходится, $p = 1$ &mdash; неизвестно.
+<p>Если ряд $\sum_{n=1}^{\infty}{a_n}, a_n > 0$ с монтонно убывающими членами сходится, то:</p>
+\[ \lim_{n \to \infty}{na_n} = 0 \]
+</p>верно обратное $\lim{na_n} \neq 0$ &mdash; расходится.</p>
+<p>Интегральный признак <b>Коши</b>. Если функция $f$ неотрицательная при $x > 0$ и не возрастает, то ряд $\sum_{n=1}^{\infty}{f(n)}$ сходится или расходится одновременно с несобственным интегралом:</p>
+\[ \int_{1}^{\infty}{f(x) dx}\]
+<p>Из <i>абсолютной</i> сходимости ряда следует его сходимость.</p>
+<p>Признак <b>Лейбница</b>. Если $a_n = (-1)^n b_n, \; b_n \geq 0$, и последовательность $(b_n)$, начиная с некоторого номера $n_0$, монотонно стремится к нулю, то ряд $\sum_{n=1}^{\infty}{a_n}$ сходится.</p>
+<p>Признак <b>Абеля</b>. Ряд $\sum_{n=1}^{\infty}{a_n b_n}$ сходится, если сходится ряд $\sum_{n=1}^{\infty}{a_n}$ и последовательность $(b_n)$ есть монотонная и ограниченная.</p>
+<p>Принак <b>Дирихле</b>. Ряд $\sum_{n=1}^{\infty}{a_n b_n}$ сходится, если последовательность $(b_n)$, начиная с некоторого номера $n_0$, монотонно стремится к нулю, а последовательность частичных сумм ряда $\sum_{n=1}^{\infty}{a_n}$ ограничена.</p>
+</td></tr>
+<tr><td>
+</td></tr>
+
+
+
+<!-- row -->
+<tr><td class = "tname">
+<p>
+<a name = "perm"></a> 
+<div class = "pname">(xii) Перестановки и свойства</div>
+<div class = "pdate">18.04.2016</div>
+<p>Перестановка (подстановка) $n$ чисел: $(1, 2, ..., n-1, n)$</p>
+<p>Число различных перестановок: $n!$</p>
+<p>Число различных циклов из $k$ элементов: $(k-1)!$</p>
+<p>Число коммутирующих перестановок с данной $\sigma$ ($\sigma \pi = \pi \sigma$):</p>
+\[ \prod_{i = 1}^{k}{n_i^{m_i} \cdot m_i ! } \]
+<p>где $n_i$ &mdash; <i>уникальная</i> длина цикла, $m_i$ &mdash; кол-во циклов с длиной $n_i$ в перестановке $\sigma$.</p>
+
+</td></tr>
+<tr><td>
+</td></tr>
+
+
 <!-- row -->
 <tr><td class = "tname">
 <p>
 <a name = "nerk"></a> 
-<div class = "pname">О числах</div>
+<div class = "pname">(xi) О числах</div>
 <div class = "pdate">02.04.2016</div>
 <p>Разложение натурального $n$ &mdash; упорядоченкая сумма натуральных слагаемых. В общем случае
 существуюет $2^{(n-1)}$ разложений (композиций) числа $n$, из которых в точности $C_{n-1}^{k-1}$ имеют длину $k$.
@@ -114,7 +164,7 @@ $a^{p-1} - 1$ делится на $p$, то есть $a^{p-1} = 1 \; (mod \; p)$
 <tr><td class = "tname">
 <p>
 <a name = "nerk"></a> 
-<div class = "pname">Неравенство о средних</div>
+<div class = "pname">(x) Неравенство о средних</div>
 <div class = "pdate">07.02.2016</div>
 <p>Для любых неотрицательных $x_1, x_2, ..., x_n$ верно неравенство:</p>
 \[ \bar{x}_{kvadr} \geq \bar{x}_{arithm} \geq \bar{x}_{geom} \geq \bar{x}_{garmon}\]
@@ -132,7 +182,7 @@ $a^{p-1} - 1$ делится на $p$, то есть $a^{p-1} = 1 \; (mod \; p)$
 <tr><td class = "tname">
 <p>
 <a name = "podob"></a> 
-<div class = "pname">Подобные матрицы. Жорданова форма</div>
+<div class = "pname">(ix) Подобные матрицы. Жорданова форма</div>
 <div class = "pdate">03.02.2016</div>
 <p>
 Матрица $\mathbf{A}$ подобна $\mathbf{B}$, если существует невырожденная $\mathbf{C}$ такая, что:
@@ -164,7 +214,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "mprop"></a> 
-<div class = "pname">Дополнительные свойства матриц</div>
+<div class = "pname">(viii) Дополнительные свойства матриц</div>
 <div class = "pdate">24.01.2016</div>
 <p>Несколько дополнительных свойств матриц:</p>
 <ul>
@@ -194,7 +244,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "deter"></a> 
-<div class = "pname">Свойства определителя $|\mathbf{A}|$</div>
+<div class = "pname">(vii) Свойства определителя $|\mathbf{A}|$</div>
 <div class = "pdate">28.11.2015</div>
 <p>Разные виды записи и подсчет через миноры при разложении по $i$-ой строке:</p>
 \[det(\mathbf{A}) \equiv \Delta_A \equiv |\mathbf{A}| = \sum_{j=1}^{n}{(-1)^{i+j}a_{ij}\bar{M}_i^j}\]
@@ -224,7 +274,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "corr"></a> 
-<div class = "pname">Поправки на множественное сравнение</div>
+<div class = "pname">(vi) Поправки на множественное сравнение</div>
 <div class = "pdate">06.11.2015</div>
 <p>Проведена серия из $n$ статистических тестов. Отсортируем их $p$ по возрастанию: $p_1 \leq p_2 \leq ... \leq p_n$. Рассмотрим несколько поправок на множественное сравнение (от жестких к мягким):</p>
 <p>Поправка <b>Бонферрони</b>:</p>
@@ -244,7 +294,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "expv"></a> 
-<div class = "pname">Математическое ожидание. Дисперсия</div>
+<div class = "pname">(v) Математическое ожидание. Дисперсия</div>
 <div class = "pdate">25.10.2015</div>
 <p>Математическое ожидание непрерывной случайной величины:</p>
 \[M[X] = \int_{-\infty}^{\infty}{x f_x(x) dx}\]
@@ -267,7 +317,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "cnk"></a>
-<div class = "pname">Несколько свойств $C_n^k$</div>
+<div class = "pname">(iv) Несколько свойств $C_n^k$</div>
 <div class = "pdate">25.10.2015</div>
 </p>
 </td></tr>
@@ -293,7 +343,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "intpt"></a>
-<div class = "pname">Интегрирование по частям</div>
+<div class = "pname">(iii) Интегрирование по частям</div>
 <div class = "pdate">25.10.2015</div>
 </p>
 </td></tr>
@@ -314,7 +364,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "prog"></a>
-<div class = "pname">Прогрессии</div>
+<div class = "pname">(ii) Прогрессии</div>
 <div class = "pdate">24.10.2015</div>
 </p>
 </td></tr>
@@ -334,7 +384,7 @@ $\lambda_i$ &mdash; собственные значения $\mathbf{A}$. Есл
 <tr><td class = "tname">
 <p>
 <a name = "harm"></a>
-<div class = "pname">Гармонические ряды</div>
+<div class = "pname">(i) Гармонические ряды</div>
 <div class = "pdate">24.10.2015</div>
 </p>
 </td></tr>
